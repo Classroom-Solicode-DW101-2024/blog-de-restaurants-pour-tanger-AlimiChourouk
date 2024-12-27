@@ -1,0 +1,334 @@
+/* Style du conteneur principal */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du titre */
+#form-title {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Style des champs du formulaire */
+#restaurant-form div {
+  margin-bottom: 1.2rem;
+}
+
+/* Style des labels */
+#restaurant-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Style des inputs et textarea */
+#restaurant-form input,
+#restaurant-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#restaurant-form input:focus,
+#restaurant-form textarea:focus {
+  outline: none;
+  border-color: #88C0D0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+/* Style spécifique pour le textarea */
+#restaurant-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Style du bouton */
+.btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: #88C0D0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #335f6b;
+}
+
+.btn:active {
+  background-color: #2c5282;
+}
+
+/* Style pour la barre de recherche */
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .form-container {
+      margin: 1rem;
+      padding: 1rem;
+  }
+}
+/* Card Container */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.card .image-placeholder {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image-placeholder {
+  transform: scale(1.09);
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: #88C0D0;
+  border-radius: 2px;
+}
+
+/* Card Info Sections */
+.card-info {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+  color: #000000;
+  font-size: 0.95rem;
+}
+
+.card-info:before {
+  content: '•';
+  color: #88C0D0;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* Rating Display */
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.rating-stars {
+  color: #fbbf24;
+  font-size: 1.2rem;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Action Buttons */
+.card .btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.card .btn-edit {
+  background: #3b82f6;
+  color: white;
+}
+
+.card .btn-edit:hover {
+  background: #5dc8e5;
+}
+
+.card .btn-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.card .btn-delete:hover {
+  background: #dc2626;
+}
+
+/* Restaurant Info Tags */
+.info-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 0.25rem;
+}
+
+.info-tag i {
+  margin-right: 0.375rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .card {
+    margin: 1rem 0;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .card .btn {
+    width: 100%;
+  }
+}
+
+/* Animation for new cards */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: cardAppear 0.3s ease-out forwards;
+}
+/* Liste des restaurants affichée sous forme de grille */
+#restaurants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonnes adaptatives */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+/* Style des cartes individuelles */
+.card {
+  background-color: #fff;
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour le relief */
+  overflow: hidden; /* Éviter que le contenu dépasse les limites de la carte */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+/* Ajouter un effet de levée au survol des cartes */
+.card:hover {
+  transform: translateY(-5px); /* Déplacer légèrement vers le haut */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
+/* Image des cartes avec des dimensions fixes et un recadrage adapté */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Recadrage pour remplir l'espace sans déformation */
+}
+
+/* Titre des cartes pour mettre en avant le nom du restaurant */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  color: #444; /* Couleur sombre pour une meilleure lisibilité */
+}
+
+/* Informations supplémentaires des cartes avec un style plus discret */
+.card-info {
+  margin: 10px;
+  font-size: 14px; /* Texte légèrement plus petit */
+  color: #000000; /* Couleur grise pour différencier les infos */
+}
+
+/* Boutons dans les cartes avec des couleurs distinctes */
+.card .btn {
+  margin: 10px;
+  padding: 10px;
+  background-color: #88C0D0; /* Bleu pour les actions secondaires */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+/* Changer la couleur des boutons au survol */
+.card .btn:hover {
+  background-color: #335f6b; /* Bleu plus foncé pour indiquer l'interaction */
+}

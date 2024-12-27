@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="flex">
+                <div class="logo-nav">
+                    <h1>Saveurs de Tanger</h1>
+                </div>
+                <div class="main-nav">
+                    <a href="index.html">Accueil</a>
+                    <a href="admine.html">Admin</a>
+                    <a href="#footer">autour</a>
+                </div>
+                <div class="search-section">
+                    <input onkeyup="recherche()"  type="search" id="inputRecherche" class="search-input" placeholder="Rechercher un restaurant...">
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="restaurant-details"></div>
+    <a href="index.html">Retour à la liste</a>
+    <footer id="footer" class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">À Propos</h3>
+                    <p class="text-gray-400">Découvrez les meilleures adresses gastronomiques de Tanger à travers notre guide culinaire complet.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens Rapides</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Restaurants Populaires</a></li>
+                        <li><a href="#" class="hover:text-white">Cuisine Locale</a></li>
+                        <li><a href="#" class="hover:text-white">Nouveaux Restaurants</a></li>
+                        <li><a href="#" class="hover:text-white">Événements Culinaires</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: contact@saveursdetanger.ma</li>
+                        <li>Téléphone: +212 5XX-XXXXXX</li>
+                        <li>Adresse: Tanger, Maroc</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Suivez-nous</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400">Facebook</a>
+                        <a href="#" class="hover:text-blue-400">Instagram</a>
+                        <a href="#" class="hover:text-blue-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 Saveurs de Tanger. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Extraire l'ID du restaurant depuis l'URL
+        const params = new URLSearchParams(window.location.search);
+        const restaurantId = params.get("id");
+// cette condition vérifie si un identifiant (id) a été fourni dans l'URL.
+        if (restaurantId) {
+            // Appeler l'API pour récupérer les détails du restaurant
+            fetch(`http://localhost:3000/restaurants/${restaurantId}`)
+                .then(response => response.json())
+                .then(restaurant => {
+                    // Afficher les détails
+                    const detailsDiv = document.getElementById("restaurant-details");
+                    detailsDiv.innerHTML = `
+                    <div id="restaurant-details">
+    <img class="imageRestaurantDe" src="${restaurant.cover}" alt="">
+    <h2 class="nomRestaurantDe">${restaurant.nom}</h2>
+    
+    <div class="info-section">
+        <div class="adresseRestaurantDe">${restaurant.adresse}</div>
+        <div class="specialiteRestaurantDe">${restaurant.spécialité}</div>
+        <div class="notationRestaurantDe">${restaurant.notation}</div>
+        <div class="numéro_de_téléphoneRestaurantDe">${restaurant.numéro_de_téléphone}</div>
+    </div>
+    
+    <div class="avisRestaurantDe">${restaurant.avis}</div>
+    <a class="lienRestaurantDe" href="${restaurant.lien}">Visiter le site</a>
+</div>
+     
+                    `;
+                })
+                .catch(error => {
+                    console.error("Erreur lors de la récupération des détails :", error);
+                    document.getElementById("restaurant-details").innerText = "Impossible de charger les détails.";
+                });
+        } else {
+            document.getElementById("restaurant-details").innerText = "Aucun restaurant sélectionné.";
+        }
+    </script>
+</body>
+</html>

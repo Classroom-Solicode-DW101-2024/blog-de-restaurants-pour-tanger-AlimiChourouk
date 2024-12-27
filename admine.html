@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin - Gestion des Restaurants</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+        <div class="flex">
+            <div class="logo-nav">
+                <h1>Saveurs de Tanger</h1>
+            </div>
+            <div class="main-nav">
+                <a href="index.html">Accueil</a>
+               
+                <a href="#restaurants-list">Restaurant</a>
+                <a href="#footer">autour</a>
+            </div>
+            <div class="search-section">
+                <input type="text" id="search-bar" class="search-bar" placeholder="Rechercher un restaurant par nom...">
+            </div>
+        </div>
+    </nav>
+</header>
+    <div class="container">
+        <div class="form-container">
+            <h2 id="form-title">Ajouter un Restaurant</h2>
+            <form id="restaurant-form">
+                <input type="hidden" id="restaurant-id">
+                <div>
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="adresse">Adresse:</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+                <div>
+                    <label for="specialite">Spécialité:</label>
+                    <input type="text" id="specialite" name="specialite" required>
+                </div>
+                <div>
+                    <label for="notation">Notation:</label>
+                    <input type="number" id="notation" name="notation" min="1" max="5" required>
+                </div>
+                <div>
+                    <label for="numéro_de_téléphone">Numéro de téléphone:</label>
+                    <input type="text" id="numéro_de_téléphone" name="numéro_de_téléphone" required>
+                </div>
+                <div>
+                    <label for="avis">Avis:</label>
+                    <textarea id="avis" name="avis" required></textarea>
+                </div>
+                <div>
+                    <label for="cover">Image de couverture URL:</label>
+                    <input type="text" id="cover" name="cover">
+                </div>
+                <div>
+                    <label for="lien">Lien du restaurant:</label>
+                    <input type="text" id="lien" name="lien">
+                </div>
+                <button type="submit" class="btn" id="submit-btn">Ajouter Restaurant</button>
+            </form>
+        </div>
+
+      
+
+        <div id="restaurants-list" class="clearfix"></div>
+    </div>
+    <footer id="footer" class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">À Propos</h3>
+                    <p class="text-gray-400">Découvrez les meilleures adresses gastronomiques de Tanger à travers notre guide culinaire complet.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens Rapides</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Restaurants Populaires</a></li>
+                        <li><a href="#" class="hover:text-white">Cuisine Locale</a></li>
+                        <li><a href="#" class="hover:text-white">Nouveaux Restaurants</a></li>
+                        <li><a href="#" class="hover:text-white">Événements Culinaires</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: contact@saveursdetanger.ma</li>
+                        <li>T éléphone: +212 6 12 34 56 78</li>
+                        <li>Adresse: 123 Rue de la Gastronomie, Tanger</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Suivez-nous</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2024 Saveurs de Tanger. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+const apiUrl = 'http://localhost:3000/restaurants';
+const restaurantForm = document.getElementById('restaurant-form');
+const submitBtn = document.getElementById('submit-btn');
+const restaurantsList = document.getElementById('restaurants-list');
+const searchBar = document.getElementById('search-bar');
+const formTitle = document.getElementById('form-title');
+let currentEditingRestaurant = null;
+let restaurantsData = [];
+
+// Récupérer tous les restaurants
+async function getRestaurants() {
+    restaurantsList.innerHTML = '<p>Chargement...</p>';
+    try {
+        const response = await fetch(apiUrl);
+        restaurantsData = await response.json();
+        displayRestaurants(restaurantsData);
+    } catch (error) {
+        restaurantsList.innerHTML = '<p>Erreur de récupération des données.</p>';
+        console.error(error);
+    }
+}
+
+// Afficher les restaurants
+function displayRestaurants(restaurants) {
+    restaurantsList.innerHTML = restaurants.map(restaurant => `
+        <div class="card">
+            <img src="${restaurant.cover}" alt="${restaurant.nom}">
+            <div class="card-title">${restaurant.nom}</div>
+            <div class="card-info">Adresse: ${restaurant.adresse}</div>
+            <div class="card-info">Spécialité: ${restaurant.spécialité}</div>
+            <div class="card-info">Notation: ${restaurant.notation}</div>
+            <div class="card-info">Téléphone: ${restaurant.numéro_de_téléphone}</div>
+            <div class="card-info">Avis: ${restaurant.avis}</div>
+            <button class="btn" onclick="editRestaurant(${restaurant.id})">Modifier</button>
+            <button class="btn" onclick="deleteRestaurant(${restaurant.id})">Supprimer</button>
+        </div>
+    `).join('');
+}
+
+// Ajouter ou modifier un restaurant
+async function handleFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(restaurantForm);
+    const restaurantData = Object.fromEntries(formData.entries());
+    const method = currentEditingRestaurant ? 'PUT' : 'POST';
+    const url = currentEditingRestaurant ? `${apiUrl}/${currentEditingRestaurant.id}` : apiUrl;
+
+    try {
+        const response = await fetch(url, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(restaurantData),
+        });
+
+        if (response.ok) {
+            alert(currentEditingRestaurant ? 'Restaurant mis à jour' : 'Restaurant ajouté');
+            getRestaurants();
+            resetForm();
+        } else {
+            alert('Erreur lors de l\'ajout/mise à jour du restaurant');
+        }
+    } catch (error) {
+        console.error('Erreur lors de l\'enregistrement:', error);
+    }
+}
+
+// Modifier un restaurant
+function editRestaurant(id) {
+    const restaurant = restaurantsData.find(r => r.id === id);
+    if (restaurant) {
+        currentEditingRestaurant = restaurant;
+        formTitle.innerText = 'Modifier un Restaurant';
+        Object.entries(restaurant).forEach(([key, value]) => {
+            const input = document.getElementById(key);
+            if (input) input.value = value;
+        });
+        submitBtn.innerText = 'Mettre à jour';
+    }
+}
+
+// Supprimer un restaurant
+async function deleteRestaurant(id) {
+    if (confirm('Voulez-vous vraiment supprimer ce restaurant ?')) {
+        try {
+            const response = await fetch(`${apiUrl}/${id}`, { method: 'DELETE' });
+            if (response.ok) {
+                alert('Restaurant supprimé');
+                getRestaurants();
+            }
+        } catch (error) {
+            console.error('Erreur lors de la suppression:', error);
+        }
+    }
+}
+
+// Réinitialiser le formulaire
+function resetForm() {
+    restaurantForm.reset();
+    currentEditingRestaurant = null;
+    formTitle.innerText = 'Ajouter un Restaurant';
+    submitBtn.innerText = 'Ajouter Restaurant';
+}
+
+// Recherche
+searchBar.addEventListener('input', () => {
+    const searchTerm = searchBar.value.toLowerCase();
+    const filteredRestaurants = restaurantsData.filter(restaurant =>
+        restaurant.nom.toLowerCase().includes(searchTerm)
+    );
+    displayRestaurants(filteredRestaurants);
+});
+
+// Initialisation
+restaurantForm.addEventListener('submit', handleFormSubmit);
+getRestaurants();
+
+        
+    </script>
+</body>
+</html>

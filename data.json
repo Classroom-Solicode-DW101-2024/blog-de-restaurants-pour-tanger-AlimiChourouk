@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "nom": "Restaurant Ô SaveurT",
+    "adresse": "Route de Malabata, Tanger, Maroc T",
+    "spécialité": "Cuisine espagnole et méditerranéenne TA",
+    "notation": "4.5",
+    "numéro_de_téléphone": "+212 539-342123",
+    "avis": "Une fusion parfaite entre cuisine locale et internationale, service impeccable et vue magnifiqueT\n\n",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/b2/74/9f/photo0jpg.jpg",
+    "lien": "https://fr.restaurantguru.com/OSaveur-Tangier T"
+  },
+  {
+    "id": 2,
+    "nom": "Restaurant El Tangerinot",
+    "adresse": "Ave Mohammed VI, Tanger, Maroct",
+    "spécialité": "Cuisine espagnole et méditerranéennet",
+    "notation": "4.5",
+    "numéro_de_téléphone": "+212 539-941111",
+    "avis": "Excellent emplacement face à la mer, service impeccable, plats savoureux et ambiance chaleureuse.t",
+    "cover": "https://media-cdn.tripadvisor.com/media/photo-s/18/52/bc/17/le-maroc-un-territoire.jpg",
+    "lien": "https://restaurantguru.com/El-Tangerino-Tangier"
+  },
+  {
+    "id": 3,
+    "nom": "Restaurant Le Saveur du Poisson",
+    "adresse": "Escalier Waller, Rue Ach-Chourafaa, Tanger, Maroc",
+    "spécialité": "Fruits de mer et poisson",
+    "notation": "4.6 sur 5",
+    "numéro_de_téléphone": "Non disponible",
+    "avis": "Un concept unique avec un menu fixe, tout est délicieux et frais. Très apprécié des locaux et des touristes.",
+    "cover": "https://img.restaurantguru.com/r4cb-design-Restaurant-Saveur-de-Poisson-2024-08-4.jpg",
+    "lien": "https://www.tripadvisor.co.uk/Restaurant_Review-g293737-d1763129-Reviews-Le_Saveur_du_Poisson-Tangier_Tanger_Tetouan_Al_Hoceima.html"
+  },
+  {
+    "id": 4,
+    "nom": "Restaurant Le Relais de Paris",
+    "adresse": "Hôtel Husa Solazur, Ave Mohammed VI, Tanger, Maroc",
+    "spécialité": "Cuisine française",
+    "notation": "4.3 sur 5",
+    "numéro_de_téléphone": "+212 539-348383",
+    "avis": "Cadre élégant, plats raffinés et un service de qualité. Idéal pour une soirée chic.",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/8b/10/f7/relais-de-paris.jpg",
+    "lien": "https://fr.restaurantguru.com/Relais-De-Paris-Tanger-Tangier-2"
+  },
+  {
+    "id": 5,
+    "nom": "Restaurant Anna & Paolo",
+    "adresse": "Rue Ibn Rochd, Tanger, Maroc",
+    "spécialité": "Cuisine italienne",
+    "notation": "4.4 sur 5",
+    "numéro_de_téléphone": "+212 539-942845",
+    "avis": "Les meilleures pizzas et pâtes de Tanger, avec un accueil chaleureux et une atmosphère conviviale.",
+    "cover": "https://images.lonelyplanetitalia.it/static/pois/anna-e-paolo-8418.jpg?q=90&p=social&s=46e0a79974a275022109895390ae9799",
+    "lien": "https://fr.restaurantguru.com/ANNA-E-PAOLO-Tangier"
+  },
+  {
+    "id": 6,
+    "nom": "Restaurant Ch'hiwat L'Couple",
+    "adresse": "Place Riad Sultan, Médina, Tanger, Maroc",
+    "spécialité": "Cuisine marocaine traditionnelle",
+    "notation": "4.7 sur 5",
+    "numéro_de_téléphone": "+212 539-375345",
+    "avis": "Des saveurs marocaines authentiques, avec un excellent rapport qualité-prix dans un cadre traditionnel.",
+    "cover": "https://www.eat.ma/wp-content/uploads/chhiwate-lkhayma-restaurant-casablanca-300x300.jpg",
+    "lien": "https://fr.restaurantguru.com/ChHiwat-LCouple-Tangier"
+  },
+  {
+    "id": 7,
+    "nom": "Restaurant La Fabrique",
+    "adresse": "Place de France, Tanger, Maroc",
+    "spécialité": "Cuisine internationale",
+    "notation": "4.2 sur 5",
+    "numéro_de_téléphone": "+212 539-376888",
+    "avis": "Un cadre moderne et élégant, parfait pour une expérience gastronomique.",
+    "cover": "https://www.morocco-guide.com/images/restaurants/sliders/fabrique-4.jpg",
+    "lien": "https://fr.restaurantguru.com/LA-FABRIQUE-Tangier"
+  },
+  {
+    "id": 8,
+    "nom": "Restaurant Chez Abdou",
+    "adresse": "Port de Pêche, Tanger, Maroc",
+    "spécialité": "Poissons frais et fruits de mer",
+    "notation": "4.5 sur 5",
+    "numéro_de_téléphone": "+212 539-354890",
+    "avis": "Des produits frais, grillés à la perfection. Un incontournable pour les amateurs de fruits de mer.",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/52/b3/4f/abdou-et-sa-famille.jpg?w=700&h=-1&s=1",
+    "lien": "https://fr.restaurantguru.com/Chez-Abdou-Tangier"
+  },
+  {
+    "id": 9,
+    "nom": "Restaurant Darna",
+    "adresse": "Rue Magellan, Tanger, Maroc",
+    "spécialité": "Cuisine marocaine et internationale",
+    "notation": "4.4 sur 5",
+    "numéro_de_téléphone": "+212 539-378455",
+    "avis": "Une ambiance conviviale avec des plats qui célèbrent la diversité culinaire de la région.",
+    "cover": "https://www.professionnels.ma/sites/default/files/inline-images/darna.jpeg",
+    "lien": "https://fr.restaurantguru.com/Restaurant-communautaire-Darna-Tangier-3"
+  },
+  {
+    "id": 10,
+    "nom": "Restaurant Cap Spartel",
+    "adresse": "Route de Cap Spartel, Tanger, Maroc",
+    "spécialité": "Cuisine méditerranéenne",
+    "notation": "4.6 sur 5",
+    "numéro_de_téléphone": "+212 539-345678",
+    "avis": "Une vue imprenable et des plats délicieux, parfait pour une sortie romantique.",
+    "cover": "https://th.bing.com/th/id/OIP.k7c8d0aq676ke6xzSmDq3QHaFj?w=1000&h=750&rs=1&pid=ImgDetMain",
+    "lien": "https://fr.restaurantguru.com/Cafe-Cap-Spartel-Tangier"
+  },
+  {
+    "id": 11,
+    "nom": "Restaurant Dar Al Maghrib",
+    "adresse": "Rue de la Kasbah, Tanger, Maroc",
+    "spécialité": "Cuisine traditionnelle marocaine",
+    "notation": "4.5 sur 5",
+    "numéro_de_téléphone": "+212 671-043087",
+    "avis": "Un cadre historique avec une cuisine authentique. Parfait pour découvrir la culture locale.",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/56/9c/f1/photo1jpg.jpg?w=1400&h=-1&s=1",
+    "lien": "https://www.tripadvisor.fr/Restaurant_Review-g304012-d4325179-Reviews-Dar_Al_Maghrebia-Asilah_Tanger_Tetouan_Al_Hoceima.html"
+  },
+  {
+    "id": 12,
+    "nom": "Restaurant La Terrasse",
+    "adresse": "Hôtel Continental, Médina, Tanger, Maroc",
+    "spécialité": "Cuisine marocaine et européenne",
+    "notation": "4.3 sur 5",
+    "numéro_de_téléphone": "+212 539-471122",
+    "avis": "Un excellent choix pour profiter d'une vue magnifique sur le port tout en dégustant de bons plats.",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/4a/6c/68/caption.jpg",
+    "lien": "https://www.tripadvisor.fr/Restaurant_Review-g293737-d8654491-Reviews-La_Terrasse_Dar_El_Kasbah-Tangier_Tanger_Tetouan_Al_Hoceima.html"
+  },
+  {
+    "id": 13,
+    "nom": "Restaurant L'Adresse",
+    "adresse": "Avenue de la Résistance, Tanger, Maroc",
+    "spécialité": "Cuisine internationale",
+    "notation": "4.4 sur 5",
+    "numéro_de_téléphone": "+212 539-457890",
+    "avis": "Un service chaleureux et une carte variée pour satisfaire tous les goûts.",
+    "cover": "https://www.morocco-guide.com/images/restaurants/sliders/ladresse-1.jpg",
+    "lien": "https://fr.restaurantguru.com/Ladresse-Lounge-Tangier-2"
+  },
+  {
+    "id": 14,
+    "nom": "Restaurant Bleu de Fès",
+    "adresse": "Rue de Fès, Tanger, Maroc",
+    "spécialité": "Cuisine marocaine raffinée",
+    "notation": "4.7 sur 5",
+    "numéro_de_téléphone": "+212 539-450123",
+    "avis": "Une véritable ode à la cuisine marocaine dans un cadre élégant.",
+    "cover": "https://th.bing.com/th/id/OIP.CDnWO5E5wvYDZQ0w5yiuPwHaFj?rs=1&pid=ImgDetMain",
+    "lien": "https://www.tripadvisor.fr/Attraction_Review-g293737-d10811521-Reviews-Bleu_de_Fes-Tangier_Tanger_Tetouan_Al_Hoceima.html"
+  },
+  {
+    "id": 15,
+    "nom": "Restaurant Le Balcon",
+    "adresse": "Place de la Kasbah, Tanger, Maroc",
+    "spécialité": "Cuisine méditerranéenne et française",
+    "notation": "4.6 sur 5",
+    "numéro_de_téléphone": "+212 539-348567",
+    "avis": "Une vue panoramique et des plats raffinés, une expérience inoubliable.",
+    "cover": "https://www.morocco-guide.com/images/accommodation/riads/riad-le-balcon-de-tanger-terrasse.jpg",
+    "lien": "https://www.booking.com/hotel/ma/le-balcon-de-tanger-tanger1.fr.html?msockid=39edebd6490268741511ff4b480a6985"
+  },
+  {
+    "id": 16,
+    "nom": "Restaurant Marina Bay",
+    "adresse": "Marina de Tanger, Maroc",
+    "spécialité": "Cuisine internationale",
+    "notation": "4.5 sur 5",
+    "numéro_de_téléphone": "+212 539-460000",
+    "avis": "Un restaurant moderne avec une vue sur le port et une ambiance détendue.",
+    "cover": "https://img.restaurantguru.com/c05c-Chiringuito-Tangier-photo.jpg?@m@t@s@d",
+    "lien": "https://www.eat.ma/tanger/ocomptoir-marina-tanger"
+  },
+  {
+    "id": 17,
+    "nom": "Restaurant Al Andalous",
+    "adresse": "Avenue Pasteur, Tanger, Maroc",
+    "spécialité": "Cuisine marocaine traditionnelle",
+    "notation": "4.4 sur 5",
+    "numéro_de_téléphone": "+212 539-347890",
+    "avis": "Un classique intemporel avec une cuisine marocaine délicieuse et un service impeccable.",
+    "cover": "https://media-cdn.tripadvisor.com/media/photo-s/16/e5/9f/09/getlstd-property-photo.jpg",
+    "lien": "https://fr.restaurantguru.com/Riad-Al-Andalous-Tangier#google_vignette"
+  },
+  {
+    "id": 18,
+    "nom": "Restaurant Le Mirage",
+    "adresse": "Grotte d'Hercule, Tanger, Maroc",
+    "spécialité": "Cuisine gastronomique",
+    "notation": "4.8 sur 5",
+    "numéro_de_téléphone": "+212 539-478900",
+    "avis": "Un cadre exceptionnel avec une cuisine digne des grandes tables.",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/22/25/ec/zona-interior-del-restaurante.jpg?w=1200&h=-1&s=1",
+    "lien": "https://fr.restaurantguru.com/Riad-Al-Andalous-Tangier#google_vignette"
+  },
+  {
+    "id": 19,
+    "nom": "Restaurant Kasbah Rose",
+    "adresse": "Rue de la Kasbah, Médina, Tanger, Maroc",
+    "spécialité": "Cuisine marocaine fusion",
+    "notation": "4.6 sur 5",
+    "numéro_de_téléphone": "+212 539-487654",
+    "avis": "Une cuisine créative dans un cadre charmant et pittoresque.",
+    "cover": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/73586309.jpg?k=55c5d37703f36c002d5a959f3c69c1c5d72661eabbd0e9dd8d58ffa01e092df6&o=&hp=1",
+    "lien": "https://kasbahrose.com/"
+  },
+  {
+    "id": 20,
+    "nom": "Restaurant Au Coin de la Kasbah",
+    "adresse": "Rue de la Kasbah, Tanger, Maroc",
+    "spécialité": "Cuisine locale",
+    "notation": "4.5 sur 5",
+    "numéro_de_téléphone": "+212 539-451234",
+    "avis": "Un excellent rapport qualité-prix avec des plats locaux savoureux.",
+    "cover": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/2d/b4/5c/photo1jpg.jpg",
+    "lien": "https://fr.restaurantguru.com/La-Terraza-De-La-Medina-Tangier"
+  },
+  {
+    "id": 1735210966172,
+    "nom": "vvvvvvvvv",
+    "adresse": "vvvvvvvvvvvvvvvvvv",
+    "notation": "1",
+    "numéro_de_téléphone": "0606872629",
+    "avis": "BBBBBBBBBBBBBBBBBBBB",
+    "cover": "https://img.restaurantguru.com/r4cb-design-Restaurant-Saveur-de-Poisson-2024-08-4.jpg",
+    "lien": "https://fr.restaurantguru.com/OSaveur-Tangier "
+  }
+]

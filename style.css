@@ -1,0 +1,470 @@
+*{
+    padding: 0%;
+    /* background-color: rgb(211, 141, 141); */
+   
+}
+body{
+  margin-top: 4rem; /* Adaptez la valeur selon la hauteur réelle du header */
+}
+.boxs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1114px; /* Ajustez selon vos besoins */
+}
+:root {
+  --header-height: 4rem; /* Hauteur exacte du header */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: var(--header-height);
+}
+
+body {
+  padding-top: var(--header-height); /* Espace équivalent à la hauteur du header */
+}
+
+/* Variables */
+:root {
+  --primary-blue: #3d7bb2;
+  --dark-blue: #88bbda;
+  --white: #ffffff;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, var(--primary-blue), var(--dark-blue));
+  padding: 0.8rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  margin-right: 19%;
+}
+
+/* Container principal du header */
+header nav {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Conteneur flex pour aligner tous les éléments */
+header nav .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  gap: 2rem;
+}
+
+/* Logo */
+.logo-nav h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Navigation principale */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  color: rgba(3, 3, 3, 0.8);
+}
+
+/* Zone de recherche et connexion */
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 10%;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  width: 220px;
+}
+#imgHeader{
+  margin-top: -10rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .search-input {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  header nav .flex {
+    flex-wrap: wrap;
+  }
+  
+  .search-input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  
+  .search-section {
+    margin-left: 0;
+  }
+}
+/* Container principal */
+.boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style des cartes restaurants */
+.boxs > div {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxs > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Style des images */
+.imageRestaurant {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Style du nom du restaurant */
+.nomRestaurant {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style de la spécialité */
+.specialiteRestaurant {
+    color: #666;
+    margin: 0.5rem 1rem;
+    font-style: italic;
+}
+
+/* Style de la notation */
+.notationRestaurant {
+    color: #f8b400;
+    font-weight: bold;
+    margin: 0.5rem 1rem;
+}
+
+/* Style du lien */
+.lienRestaurant {
+    color: #2196f3;
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.lienRestaurant:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Style du bouton détails */
+button {
+    margin: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #88C0D0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background-color:#335f6b;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+    .boxs {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .nomRestaurant {
+        font-size: 1.2rem;
+    }
+}
+/* Variables globales */
+:root {
+    --primary-color: #2E3440;
+    --secondary-color: #4C566A;
+    --accent-color: #88C0D0;
+    --gold: #D4AF37;
+    --background: #ECEFF4;
+    --white: #FFFFFF;
+    --spacing: 1.5rem;
+  }
+  
+  /* Styles généraux */
+  body {
+    background-color: var(--background);
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+  }
+  
+  /* Container principal */
+  #restaurant-details {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: var(--spacing);
+    background: var(--white);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  /* Image principale */
+  .imageRestaurantDe {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease;
+  }
+  
+  .imageRestaurantDe:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Nom du restaurant */
+  .nomRestaurantDe {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin: 2rem 0;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 1rem;
+  }
+  
+  /* Conteneur d'informations */
+  .info-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 0 var(--spacing);
+  }
+  
+  /* Styles communs pour les informations */
+  .adresseRestaurantDe,
+  .specialiteRestaurantDe,
+  .notationRestaurantDe,
+  .numéro_de_téléphoneRestaurantDe {
+    padding: 1.5rem;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  /* Effets hover sur les informations */
+  .adresseRestaurantDe:hover,
+  .specialiteRestaurantDe:hover,
+  .notationRestaurantDe:hover,
+  .numéro_de_téléphoneRestaurantDe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Style spécial pour la notation */
+  .notationRestaurantDe {
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(45deg, #f3f3f3, #ffffff);
+  }
+  
+  /* Section des avis */
+  .avisRestaurantDe {
+    margin: 3rem 0;
+    padding: 2rem;
+    font-style: italic;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  /* Lien stylisé */
+  .lienRestaurantDe {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+  
+  .lienRestaurantDe:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #restaurant-details > * {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .info-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .nomRestaurantDe {
+      font-size: 2.5rem;
+    }
+  
+    .imageRestaurantDe {
+      height: 40vh;
+    }
+  }
+  /* page admin */
+  
+  /* page admin */
+  /* Détails supplémentaires */
+  .adresseRestaurantDe::before,
+  .specialiteRestaurantDe::before,
+  .numéro_de_téléphoneRestaurantDe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--accent-color), transparent);
+  }
+  footer {
+    background-color: #1a1a1a; /* Couleur sombre */
+    color: #ffffff; /* Texte blanc */
+    padding: 2rem 1rem; /* Espacement */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem; /* Espacement entre les colonnes */
+  }
+  
+  footer h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f8f9fa;
+  }
+  
+  footer p,
+  footer ul,
+  footer li {
+    color: #b3b3b3; /* Texte secondaire gris clair */
+    line-height: 1.6;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #b3b3b3; /* Lien initial */
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #ffffff; /* Lien survolé */
+  }
+  
+  footer .flex {
+    display: flex;
+    gap: 1rem; /* Espacement entre les éléments */
+  }
+  
+  footer .border-t {
+    border-top: 1px solid #333333; /* Bordure grise subtile */
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  
+  footer .text-center {
+    text-align: center;
+  }
+  
+  footer .space-y-2 > li {
+    margin-bottom: 0.5rem;
+  }
+  
+  footer .hover\:text-blue-400:hover {
+    color: #60a5fa; /* Couleur bleue sur les icônes sociales */
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
